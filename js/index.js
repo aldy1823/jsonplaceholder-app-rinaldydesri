@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (highlightRerum(post.body)) tr.classList.add('bg-yellow-100');
 
       tr.innerHTML = `
-        <td class="border px-4 py-2">${post.id}</td>
-        <td class="border px-4 py-2">${post.title}</td>
-        <td class="border px-4 py-2">${post.body}</td>
+        <td class="border px-4 py-2 cursor-pointer">${post.id}</td>
+        <td class="border px-4 py-2 cursor-pointer">${post.title}</td>
+        <td class="border px-4 py-2 cursor-pointer">${post.body}</td>
       `;
 
       tr.addEventListener('click', async () => {
