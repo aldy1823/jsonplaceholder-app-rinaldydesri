@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .fade-in { animation: fadeIn 0.6s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-white to-blue-50 min-h-screen p-6 font-sans">
+  <div class="max-w-4xl mx-auto shadow-xl bg-white p-6 rounded-xl fade-in">
+    <header class="mb-6">
+      <h1 class="text-4xl font-bold text-blue-700"><i class="fas fa-chart-bar mr-2"></i>Reports</h1>
+      <a href="index.html" class="text-blue-600 mt-3 inline-block hover:underline"><i class="fas fa-arrow-left mr-1"></i>Back to Posts</a>
+    </header>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold text-blue-800 mb-2"><i class="fas fa-search mr-1"></i>Posts containing "rerum"</h2>
+      <p id="rerumCount" class="text-lg text-gray-700"></p>
+    </section>
+    <section>
+      <h2 class="text-xl font-semibold text-blue-800 mb-2"><i class="fas fa-user mr-1"></i>Post count by User ID</h2>
+      <table class="table-auto w-full border shadow-sm rounded overflow-hidden bg-white">
+        <thead>
+          <tr class="bg-blue-100 text-blue-900">
+            <th class="px-4 py-2 text-left">User ID</th>
+            <th class="px-4 py-2 text-left">Post Count</th>
+          </tr>
+        </thead>
+        <tbody id="userPostCounts" class="bg-white"></tbody>
+      </table>
+    </section>
+  </div>
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/reports.js"></script>
+</body>
+</html>
